@@ -11,6 +11,19 @@
   };
   firebase.initializeApp(config);
 
+  console.log(firebase);
+
+  var database=firebase.database();
+  var ref=database.ref('events');
+  console.log('works');
+
+  var data={
+    name: "imtiaz",
+    batch: 2013
+  }
+  ref.push();
+
+  console.log('works!');
   const textEmail=document.getElementbyId("textEmail");
   const textPassword=document.getElementbyId("textPasswordl");
   const btnlogin=document.getElementbyId("btnlogin");
@@ -22,18 +35,17 @@
     const pass=textPassword.value;
     const auth=firebase.auth();
     const promise=auth.signInWithEmailAndPassword(email,pass);
-    promise.catch(e=> console.log(e.message);
+    promise.catch(e=> console.log(e.message));
   });
 
-  btnsignup.addEventListener('click',e->{
+  btnsignup.addEventListener('click',e=>{
 
       const email=textEmail.value;
       const pass=textPassword.value;
       const auth=firebase.auth();
       const promise=auth.createUserWithEmailAndPassword(email,pass);
-      promise
-      .catch(e=> console.log(e.message);
-  })
+      promise.catch(e=> console.log(e.message));
+  });
 
   btnlogout.addEventListener('click',e=>{
     firebase.auth().signOut();
@@ -47,11 +59,9 @@
       console.log('not logged in');
       btnlogout.classList.ad('hide');
     }
-  })
+  });
 
 
-
-});
 
 
 
