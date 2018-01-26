@@ -1,3 +1,8 @@
+
+
+
+
+
 $(window).load(function(){
     var $container = $('.galleryContainer'),
         $body = $('body'),
