@@ -19,7 +19,7 @@ $(window).load(function(){
             return window.pageYOffset || document.documentElement.scrollTop;
         }
     });
-    
+
     $container.isotope({
         // disable window resizing
         resizable: true,
