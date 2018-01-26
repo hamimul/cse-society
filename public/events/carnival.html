@@ -9,13 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Homepage</title>
+    <title>Carnival</title>
 
 	<link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
+	<!-- Navbar Style  -->
+	<link href="css/navbar_style.css" rel="stylesheet" type="text/css" >
+	
 	<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
@@ -44,23 +47,31 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#mainCarousel">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <a href="index.html#about">About</a>
                     </li>
-					<li>
-                        <a href="#gallery">Gallery</a>
+					          <li>
+                        <a href="index.html#gallery">Gallery</a>
                     </li>
-					<li>
-                        <a href="#events">Events</a>
+                    <li>
+					              <a href="index.html#events">Events</a>
                     </li>
-					<li>
-                        <a href="#events">Committee</a>
+
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="Committee.html#" aria-expanded="false">Committee<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="Committee.html">2017</a></li>
+							<li><a href="Committee2.html">2016</a></li>
+							<li><a href="Committee3.html">2015</a></li>
+
+						</ul>
+
                     </li>
 
                     <li>
-                        <a href="#contact">Contact Us</a>
+                        <a href="index.html#contact">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -70,9 +81,9 @@
     </nav>
 
     <style>
-
+		body { padding-top: 70px; }
     	.navbar-default {
-    		background-color: transparent;
+    		background-color: #001E4F;
     		border-color: transparent;
     		-webkit-transition: all 0.5s ease 0s;
   			-o-transition: all 0.5s ease 0s;
@@ -170,9 +181,6 @@
 
 
     </style>
-
-
-
     <div id="about">
     	<div class="container">
     		<div class="text">
