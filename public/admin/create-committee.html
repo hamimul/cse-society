@@ -9,18 +9,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Homepage</title>
+    <title>Create Committee</title>
 
-	<link href="css/style.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel='shortcut icon' type='../image/x-icon' href='favicon.ico' />
 
-	<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=NTR' rel='stylesheet' type='text/css'>
+    <!-- Navbar Style  -->
+    <link href="../css/navbar_style.css" rel="stylesheet" type="text/css" >
+    
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=NTR' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -44,23 +47,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#mainCarousel">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li>
-                        <a href="#about">About</a>
-                    </li>
-					<li>
-                        <a href="#gallery">Gallery</a>
-                    </li>
-					<li>
-                        <a href="#events">Events</a>
-                    </li>
-					<li>
-                        <a href="#events">Committee</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">Contact Us</a>
+                        <a href="#">Log In/Log Out</a>
                     </li>
                 </ul>
             </div>
@@ -70,255 +60,540 @@
     </nav>
 
     <style>
+        body { padding-top: 120px; }
+        .navbar-default {
+            background-color: #001E4F;
+            border-color: transparent;
+            -webkit-transition: all 0.5s ease 0s;
+            -o-transition: all 0.5s ease 0s;
+            transition: all 0.5s ease 0s;
+        }
 
-    	.navbar-default {
-    		background-color: transparent;
-    		border-color: transparent;
-    		-webkit-transition: all 0.5s ease 0s;
-  			-o-transition: all 0.5s ease 0s;
-  			transition: all 0.5s ease 0s;
-    	}
+        .navbar-nav {
+            margin-top: 40px;
+            float: right;
+        }
 
-    	.navbar-nav {
-    		margin-top: 40px;
-    		float: right;
-    	}
+        @media screen and (max-width: 767px) {
+        .navbar-nav {
+            float: none;
+            text-align: center;
+            background: rgba(25, 33, 60, 0.5);
+        }
+        }
 
-    	@media screen and (max-width: 767px) {
-    	.navbar-nav {
-    		float: none;
-    		text-align: center;
-    		background: rgba(25, 33, 60, 0.5);
-    	}
-    	}
+        .navbar-default .navbar-brand {
+            margin-top: 40px;
+            font-size: 28px;
+            font-family: 'Righteous', cursive;
+            color:#E04433;
+            letter-spacing: 1px;
+            -moz-transition:color .5s ease-in;
+            -o-transition:color .5s ease-in;
+            -webkit-transition:color .5s ease-in;
+        }
 
-    	.navbar-default .navbar-brand {
-    		margin-top: 40px;
-    		font-size: 28px;
-    		font-family: 'Righteous', cursive;
-    		color:#E04433;
-    		letter-spacing: 1px;
-    		-moz-transition:color .5s ease-in;
-   			-o-transition:color .5s ease-in;
-    		-webkit-transition:color .5s ease-in;
-    	}
+        .navbar-default .navbar-brand span {
+            color:#68696D;
+            -moz-transition:color .5s ease-in;
+            -o-transition:color .5s ease-in;
+            -webkit-transition:color .5s ease-in;
+        }
 
-    	.navbar-default .navbar-brand span {
-    		color:#68696D;
-    		-moz-transition:color .5s ease-in;
-   			-o-transition:color .5s ease-in;
-    		-webkit-transition:color .5s ease-in;
-    	}
+        @media screen and (max-width: 400px) {
+        .navbar-default .navbar-brand {
+            font-size: 22px;
+        }
+        }
 
-    	@media screen and (max-width: 400px) {
-    	.navbar-default .navbar-brand {
-    		font-size: 22px;
-    	}
-    	}
+        .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand span:hover {
+            color: #696A6B;
+        }
 
-    	.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand span:hover {
-    		color: #696A6B;
-    	}
+        .navbar-default .navbar-nav>li>a {
+            color: #fff;
+            font-size: 14px;
+            font-family: 'Noto Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    	.navbar-default .navbar-nav>li>a {
-    		color: #fff;
-    		font-size: 14px;
-    		font-family: 'Noto Sans', sans-serif;
-    		text-transform: uppercase;
-    		letter-spacing: 1px;
-    	}
+        .navbar-default .navbar-nav>li>a:hover {
+            color: #696A6B;
+        }
 
-    	.navbar-default .navbar-nav>li>a:hover {
-    		color: #696A6B;
-    	}
+        .navbar-default .navbar-nav>li>a:focus {
+            color: #696A6B;
+        }
 
-    	.navbar-default .navbar-nav>li>a:focus {
-    		color: #696A6B;
-    	}
+        .navbar-default .navbar-toggle {
+            margin-top: 40px;
+            border: none;
+        }
 
-    	.navbar-default .navbar-toggle {
-    		margin-top: 40px;
-    		border: none;
-    	}
+        .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+            background: none;
+        }
 
-		.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-			background: none;
-		}
+        .navbar-default .navbar-toggle .icon-bar {
+            height: 4px;
+            width: 28px;
+            background: #42a5f6;
+        }
 
-    	.navbar-default .navbar-toggle .icon-bar {
-    		height: 4px;
-    		width: 28px;
-    		background: #42a5f6;
-		}
+        .navbar-default.shrink {
+            background:rgba(25, 33, 60, 0.8)
+        }
 
-    	.navbar-default.shrink {
-    		background:rgba(25, 33, 60, 0.8)
-		}
+        .navbar-default.shrink .navbar-nav {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
-		.navbar-default.shrink .navbar-nav {
-			margin-top: 20px;
-			margin-bottom: 10px;
-		}
+        .navbar-default.shrink .navbar-brand {
+            margin-top: 20px;
+        }
 
-		.navbar-default.shrink .navbar-brand {
-			margin-top: 20px;
-		}
-
-		.navbar-default.shrink .navbar-toggle {
-			margin-top: 25px;
-		}
+        .navbar-default.shrink .navbar-toggle {
+            margin-top: 25px;
+        }
 
 
     </style>
 
 
+   <style>
+form {
+    border: 3px solid #f1f1f1;
+}
 
-    <div id="create">
-    	<div class="container">
-    		<br /><br /><br /><br /><h2>Create New Committee</h2>
-    		<p>Please fill up the required area.</p>
-    		<div class="col-md-6">
-    			<div class="contact-form">
-					<form action="#" method="post">
-						<input id="SerialNo" name="name" type="text" placeholder="Serial No" required><br />
-  						<input id="SerialNo" name="name" type="text" placeholder="Timeline" required><br />
-						<input id="email" name="email" type="text" placeholder="Vice President" required><br />
-						<input id="subject" name="subject" type="subject" placeholder="General Secretary" required><br />
-						<input id="subject" name="subject" type="subject" placeholder="Organizing Secretary" required><br />
-						<input id="subject" name="subject" type="subject" placeholder="Cultural Secretary" required><br />
-						<input id="subject" name="subject" type="subject" placeholder="Sports Secretary" required><br />
-						<input id="subject" name="subject" type="subject" placeholder="Executive Memver" required><br />
-						<input id="subject" name="subject" type="subject" placeholder="Executive Memver" required><br />
-						<input id="subject" name="subject" type="subject" placeholder="Executive Memver" required><br />
-						<input id="subject" name="subject" type="subject" placeholder="Executive Memver" required><br />
-						<textarea id="message" name="message" placeholder="Your Message:" rows="5" required></textarea>
-						<br>
-						<button name="submit" id="submit" type="submit">CREATE</button>
-					</form>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="image">
-					<img src="images/society.png" class="img-responsive style="width:90px;height:90px;">
-				</div>
-			</div>
-    	</div>
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<div>
+      <h2>Create Society Committee</h2>
+
+<form action="/action_page.php">
+ 
+  
+
+   <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3> President</h3>
     </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="press_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="press_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="press_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="press_pic" required>
+    
+    
+  </div>
 
 
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Treasurer</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="tres_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="tres_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="tres_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="tres_pic" required>
+    
+    
+  </div>
+
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Vice President</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="vp_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="vp_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="vp_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="vp_pic" required>
+    
+    
+  </div>
+
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>General Secreetary</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="gs_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="gs_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="gs_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="gs_pic" required>
+    
+    
+  </div>
+
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Assistance General Secreetary</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="ags_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="ags_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="ags_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="ags_pic" required>
+ </div>
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Event & Cultural Secreetary</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="ecs_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="ecs_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="ecs_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="ecs_pic" required>
+ </div>
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Publication Secretary</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="ps_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="ps_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="ps_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="ps_pic" required>
+ </div>
+
+
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Sports Secreetary</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="sprt_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="sprt_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="sprt_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="sprt_pic" required>
+ </div>
+
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Executive Member 1</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="em1_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="em1_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="em1_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="em1_pic" required>
+ </div>
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Executive Member 2</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="em2_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="em2_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="em2_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="em2_pic" required>
+ </div>
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Executive Member 3</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="em3_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="em3_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="em3_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="em3_pic" required>
+ </div>
+
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Executive Member 4</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="em4_name" required>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="em4_des" required>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="em4_mail" required>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="em4_pic" required>
+ </div>
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Executive Member 5</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="em5_name" unrequired>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="em5_des" unrequired>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="em5_mail" unrequired>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="em5_pic" unrequired>
+ </div>
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Executive Member 6</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="em6_name" unrequired>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="em6_des" unrequired>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="em6_mail" unrequired>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="em6_pic" unrequired>
+ </div>
+
+
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Executive Member 7</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="em7_name" unrequired>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="em7_des" unrequired>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="em7_mail" unrequired>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="em7_pic" unrequired>
+ </div>
+
+
+
+  <div class="container col-md-8 col-md-offset-2">
+    <div>
+        <h3>Executive Member 8</h3>
+    </div>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="em8_name" unrequired>
+        <label><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="em8_des" unrequired>
+        <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email address" name="em8_mail" unrequired>
+
+        <label><b>Upload</b></label>
+    <input type="file" placeholder="Upload Photo" name="em8_pic" unrequired>
+ </div>
+
+
+
+
+    <div class="container col-md-8 col-md-offset-2">
+        <button class="btn btn-info" type="submit">Submit</button>
+    </div>
+</form>
+</div>
 
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
-    <script src="js/jquery.isotope.js"></script>
+    <script src="../js/jquery.isotope.js"></script>
 
-    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="../js/jquery.scrollUp.min.js"></script>
 
 
-	<script type="text/javascript">
+    <script type="text/javascript">
 
-	$('a[href^="#"]').on('click', function(event) {
-    	var target = $(this.getAttribute('href'));
-    	if( target.length ) {
-       		event.preventDefault();
-        	$('html, body').stop().animate({
-            	scrollTop: target.offset().top
-        	}, 1000);
-    	}
-	});
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
 
-	</script>
+    </script>
 
 
     <!-- Navbar Change on Scroll -->
-	<script type="text/javascript">
-		$(function(){
- 		var shrinkHeader = 100;
-  		$(window).scroll(function() {
-    		var scroll = getCurrentScroll();
-      		if ( scroll >= shrinkHeader ) {
-           		$('.navbar-default').addClass('shrink');
-        	}
-       		else {
-            	$('.navbar-default').removeClass('shrink');
-        	}
-  		});
-		function getCurrentScroll() {
-    		return window.pageYOffset || document.documentElement.scrollTop;
-    	}
-	});
+    <script type="text/javascript">
+        $(function(){
+        var shrinkHeader = 100;
+        $(window).scroll(function() {
+            var scroll = getCurrentScroll();
+            if ( scroll >= shrinkHeader ) {
+                $('.navbar-default').addClass('shrink');
+            }
+            else {
+                $('.navbar-default').removeClass('shrink');
+            }
+        });
+        function getCurrentScroll() {
+            return window.pageYOffset || document.documentElement.scrollTop;
+        }
+    });
 
-	</script>
-
-
-	<!-- Gallery  Isotope Settings -->
-	<script type="text/javascript">
-
-	$(window).load(function(){
+    </script>
 
 
- 	 var $container = $('.galleryContainer'),
-     	$body = $('body'),
-     	colW = 375,
-      	columns = null;
+    
 
 
-  	$container.isotope({
-    // disable window resizing
-    	resizable: true,
-   	 	masonry: {
-        columnWidth: colW
-    	}
-  	});
-
-  	$(window).smartresize(function(){
-    // check if columns has changed
-    	var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
-    	if ( currentColumns !== columns ) {
-      	// set new column count
-      	columns = currentColumns;
-      	// apply width to container manually, then trigger relayout
-      	$container.width( columns * colW )
-        	.isotope('reLayout');
-    	}
-
-  	}).smartresize(); // trigger resize to set container width
-  	$('.galleryFilter a').click(function(){
-        	$('.galleryFilter .current').removeClass('current');
-        	$(this).addClass('current');
-
-        	var selector = $(this).attr('data-filter');
-        	$container.isotope({
-
-            filter: selector,
-         });
-        	 return false;
-   	 	});
-
-	});
-
-	</script>
-
-
-	<!-- Scroll To Top Settings -->
+    <!-- Scroll To Top Settings -->
     <script type="text/javascript">
 
     $(function () {
-  		$.scrollUp({
-    		scrollName: 'scrollUp', // Element ID
-    		topDistance: '300', // Distance from top before showing element (px)
-    		topSpeed: 600, // Speed back to top (ms)
-    		animation: 'fade', // Fade, slide, none
-    		animationInSpeed: 200, // Animation in speed (ms)
-    		animationOutSpeed: 200, // Animation out speed (ms)
-    		activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
-    		scrollImg: true,
-  		});
-	});
+        $.scrollUp({
+            scrollName: 'scrollUp', // Element ID
+            topDistance: '300', // Distance from top before showing element (px)
+            topSpeed: 600, // Speed back to top (ms)
+            animation: 'fade', // Fade, slide, none
+            animationInSpeed: 200, // Animation in speed (ms)
+            animationOutSpeed: 200, // Animation out speed (ms)
+            activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+            scrollImg: true,
+        });
+    });
 
     </script>
 
